@@ -1,10 +1,9 @@
-:doctype: book
+= Java JWT: JSON Web Token for Java and Android
+:project-version: JJWT_RELEASE_VERSION
 
 image:https://github.com/jwtk/jjwt/actions/workflows/ci.yml/badge.svg?branch=master[Build Status,link=https://github.com/jwtk/jjwt/actions/workflows/ci.yml?query=branch%3Amaster]
 image:https://coveralls.io/repos/github/jwtk/jjwt/badge.svg?branch=master[Coverage Status,link=https://coveralls.io/github/jwtk/jjwt?branch=master]
 image:https://badges.gitter.im/jwtk/jjwt.svg[Gitter,link=https://gitter.im/jwtk/jjwt?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge]
-
-= Java JWT: JSON Web Token for Java and Android
 
 JJWT aims to be the easiest to use and understand library for creating and verifying JSON Web Tokens (JWTs) on the JVM
 and Android.
@@ -667,23 +666,23 @@ If you're building a (non-Android) JDK project, you will want to define the foll
 
 ==== Maven
 
-[,xml]
+[source,xml,subs="+attributes"]
 ----
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-api</artifactId>
-    <version>JJWT_RELEASE_VERSION</version>
+    <version>{project-version}</version>
 </dependency>
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-impl</artifactId>
-    <version>JJWT_RELEASE_VERSION</version>
+    <version>{project-version}</version>
     <scope>runtime</scope>
 </dependency>
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
-    <version>JJWT_RELEASE_VERSION</version>
+    <version>{project-version}</version>
     <scope>runtime</scope>
 </dependency>
 <!-- Uncomment this next dependency if you are using:
@@ -704,12 +703,12 @@ If you're building a (non-Android) JDK project, you will want to define the foll
 
 ==== Gradle
 
-[,groovy]
+[,groovy,subs="+attributes"]
 ----
 dependencies {
-    implementation 'io.jsonwebtoken:jjwt-api:JJWT_RELEASE_VERSION'
-    runtimeOnly 'io.jsonwebtoken:jjwt-impl:JJWT_RELEASE_VERSION'
-    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:JJWT_RELEASE_VERSION' // or 'io.jsonwebtoken:jjwt-gson:JJWT_RELEASE_VERSION' for gson
+    implementation 'io.jsonwebtoken:jjwt-api:{project-version}'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:{project-version}'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:{project-version}' // or 'io.jsonwebtoken:jjwt-gson:{project-version}' for gson
     /*
       Uncomment this next dependency if you are using:
        - JDK 10 or earlier, and you want to use RSASSA-PSS (PS256, PS384, PS512) signature algorithms.
@@ -734,12 +733,12 @@ BouncyCastle `Provider`:
 
 Add the dependencies to your project:
 
-[,groovy]
+[,groovy,subs="+attributes"]
 ----
 dependencies {
-    api('io.jsonwebtoken:jjwt-api:JJWT_RELEASE_VERSION')
-    runtimeOnly('io.jsonwebtoken:jjwt-impl:JJWT_RELEASE_VERSION')
-    runtimeOnly('io.jsonwebtoken:jjwt-orgjson:JJWT_RELEASE_VERSION') {
+    api('io.jsonwebtoken:jjwt-api:{project-version}')
+    runtimeOnly('io.jsonwebtoken:jjwt-impl:{project-version}')
+    runtimeOnly('io.jsonwebtoken:jjwt-orgjson:{project-version}') {
         exclude(group: 'org.json', module: 'json') //provided by Android natively
     }
     /*
@@ -3144,22 +3143,22 @@ scope which is the typical JJWT default).  That is:
 
 *Maven*
 
-[,xml]
+[,xml,subs="+attributes"]
 ----
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-jackson</artifactId>
-    <version>JJWT_RELEASE_VERSION</version>
+    <version>{project-version}</version>
     <scope>compile</scope> <!-- Not runtime -->
 </dependency>
 ----
 
 *Gradle or Android*
 
-[,groovy]
+[,groovy,subs="+attributes"]
 ----
 dependencies {
-    implementation 'io.jsonwebtoken:jjwt-jackson:JJWT_RELEASE_VERSION'
+    implementation 'io.jsonwebtoken:jjwt-jackson:{project-version}'
 }
 ----
 
@@ -3271,22 +3270,22 @@ scope which is the typical JJWT default).  That is:
 
 *Maven*
 
-[,xml]
+[,xml,subs="+attributes"]
 ----
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-gson</artifactId>
-    <version>JJWT_RELEASE_VERSION</version>
+    <version>{project-version}</version>
     <scope>compile</scope> <!-- Not runtime -->
 </dependency>
 ----
 
 *Gradle or Android*
 
-[,groovy]
+[,groovy,subs="+attributes"]
 ----
 dependencies {
-    implementation 'io.jsonwebtoken:jjwt-gson:JJWT_RELEASE_VERSION'
+    implementation 'io.jsonwebtoken:jjwt-gson:{project-version}'
 }
 ----
 
