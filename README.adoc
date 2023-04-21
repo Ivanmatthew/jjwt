@@ -2,6 +2,7 @@
 :project-version: JJWT_RELEASE_VERSION
 :toc:
 :toc-placement!:
+:toclevels: 4
 
 image:https://github.com/jwtk/jjwt/actions/workflows/ci.yml/badge.svg?branch=master[Build Status,link=https://github.com/jwtk/jjwt/actions/workflows/ci.yml?query=branch%3Amaster]
 image:https://coveralls.io/repos/github/jwtk/jjwt/badge.svg?branch=master[Coverage Status,link=https://coveralls.io/github/jwtk/jjwt?branch=master]
