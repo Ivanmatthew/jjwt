@@ -21,6 +21,41 @@ and is supported and maintained by a https://github.com/jwtk/jjwt/graphs/contrib
 We've also added some convenience extensions that are not part of the specification, such as JWS compression and claim
 enforcement.
 
+Admonitions examples:
+
+NOTE: This is a note.
+
+IMPORTANT: this one is important.
+
+Block form admonition (from adoc ref)
+
+[IMPORTANT]
+.Feeding the Werewolves
+====
+While werewolves are hardy community members, keep in mind the following dietary concerns:
+
+. They are allergic to cinnamon.
+. More than two glasses of orange juice in 24 hours makes them howl in harmony with alarms and sirens.
+. Celery makes them sad.
+====
+
+Code block with callouts
+
+====
+[source, java]
+----
+System.out.println("Hello JJWT!");
+System.out.println("call out test"); // <.>
+----
+<.> This is a simple println to test how callouts look when rendered in GH.
+====
+
+Generated table of contents
+
+:toc:
+
+Manually formatted table of contents
+
 == Table of Contents
 
 * <<features,Features>>
